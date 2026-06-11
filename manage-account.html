@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Your Account & Data — PSC Helper</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2C2040;
+            background: #F5F3FA;
+            padding: 20px;
+        }
+        .container {
+            max-width: 720px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 2px 12px rgba(26, 35, 126, 0.06);
+        }
+        h1 { color: #1A237E; font-size: 28px; margin-bottom: 8px; }
+        .subtitle { color: #9B8FC0; font-size: 15px; margin-bottom: 32px; }
+        h2 { color: #1A237E; font-size: 22px; margin-top: 40px; margin-bottom: 12px; }
+        h3 { color: #2C2040; font-size: 16px; margin-top: 20px; margin-bottom: 10px; }
+        p { margin-bottom: 16px; color: #2C2040; }
+        ol, ul { margin-left: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        .step-box {
+            background: #F5F3FA;
+            border-left: 4px solid #1A237E;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .warning {
+            background: #FEF2F2;
+            border-left: 4px solid #E24B4A;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+        .warning strong { color: #E24B4A; }
+        .info {
+            background: #E8EAF6;
+            border-left: 4px solid #1A237E;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+        .compare-table th, .compare-table td {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid #E5E0F5;
+        }
+        .compare-table th {
+            background: #F5F3FA;
+            color: #1A237E;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .compare-table td { font-size: 14px; }
+        .compare-table td.yes { color: #2E7D52; font-weight: 500; }
+        .compare-table td.no { color: #E24B4A; font-weight: 500; }
+        .contact-email {
+            color: #1A237E;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .contact-email:hover { text-decoration: underline; }
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #E5E0F5;
+            color: #9B8FC0;
+            font-size: 13px;
+            text-align: center;
+        }
+        .toc {
+            background: #F5F3FA;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+        }
+        .toc strong { color: #1A237E; }
+        .toc a {
+            color: #1A237E;
+            text-decoration: none;
+            display: block;
+            padding: 4px 0;
+        }
+        .toc a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .container { padding: 24px 20px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 19px; }
+            .compare-table th, .compare-table td { padding: 10px 8px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Manage Your Account & Data</h1>
+    <p class="subtitle">App: PSC Helper · Developer: ForUniverse</p>
+
+    <p>PSC Helper gives you full control over your data. You can either <strong>clear your quiz progress</strong> (keeping your account active) or <strong>permanently delete your account</strong> (removing all data). This page explains both options.</p>
+
+    <div class="toc">
+        <strong>Jump to:</strong>
+        <a href="#compare">Quick comparison</a>
+        <a href="#clear-progress">Option 1 — Clear quiz progress</a>
+        <a href="#delete-account">Option 2 — Delete your account</a>
+        <a href="#email-request">Option 3 — Request by email</a>
+        <a href="#data-retained">What data is retained</a>
+        <a href="#help">Need help?</a>
+    </div>
+
+    <h2 id="compare">Quick Comparison</h2>
+
+    <table class="compare-table">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Clear Progress</th>
+            <th>Delete Account</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Quiz stats reset to zero</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+        </tr>
+        <tr>
+            <td>Account remains active</td>
+            <td class="yes">Yes</td>
+            <td class="no">No</td>
+        </tr>
+        <tr>
+            <td>Removed from leaderboard</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+        </tr>
+        <tr>
+            <td>Can sign back in</td>
+            <td class="yes">Yes</td>
+            <td class="no">No, need to sign in again</td>
+        </tr>
+        <tr>
+            <td>Name & email kept</td>
+            <td class="yes">Yes</td>
+            <td class="no">No, removed</td>
+        </tr>
+        <tr>
+            <td>Reversible</td>
+            <td class="no">No</td>
+            <td class="no">No</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2 id="clear-progress">Option 1 — Clear Your Quiz Progress</h2>
+
+    <p>Use this if you want to start fresh while keeping your account active. Your quiz statistics, leaderboard ranking, and accuracy history will be reset to zero — but you remain signed in and can continue using the app immediately.</p>
+
+    <div class="step-box">
+        <ol>
+            <li>Open the <strong>PSC Helper</strong> app on your device</li>
+            <li>Sign in if you are not already signed in</li>
+            <li>On the home screen, tap the <strong>profile section</strong> (your name and email at the top)</li>
+            <li>Scroll to the <strong>Clear Progress</strong> section</li>
+            <li>Tap <strong>Clear Progress</strong> and confirm your choice</li>
+        </ol>
+    </div>
+
+    <h3>What gets cleared</h3>
+    <ul>
+        <li>Total questions attempted</li>
+        <li>Total correct answers</li>
+        <li>Your accuracy percentage</li>
+        <li>Your leaderboard position</li>
+    </ul>
+
+    <h3>What stays</h3>
+    <ul>
+        <li>Your name, email, and profile picture</li>
+        <li>Your account credentials</li>
+        <li>Your sign-in session</li>
+    </ul>
+
+    <div class="warning">
+        <strong>⚠️ Clearing progress cannot be undone.</strong>
+        <p style="margin-top: 8px; margin-bottom: 0;">Your statistics cannot be recovered once cleared. You'll start from zero on your next quiz session.</p>
+    </div>
+
+    <h2 id="delete-account">Option 2 — Delete Your Account</h2>
+
+    <p>Use this if you want to permanently remove your account and all associated data from our servers.</p>
+
+    <div class="step-box">
+        <ol>
+            <li>Open the <strong>PSC Helper</strong> app on your device</li>
+            <li>Sign in if you are not already signed in</li>
+            <li>On the home screen, tap the <strong>profile section</strong> (your name and email at the top)</li>
+            <li>Scroll to the <strong>Delete Account</strong> section</li>
+            <li>Tap <strong>Delete Account</strong> and confirm your choice</li>
+        </ol>
+    </div>
+
+    <p>Your account and all associated data will be permanently deleted immediately. You will be signed out and returned to the welcome screen.</p>
+
+    <h3>What gets deleted</h3>
+    <ul>
+        <li>Your name and email address</li>
+        <li>Your profile picture URL</li>
+        <li>Your quiz progress and statistics</li>
+        <li>Your leaderboard ranking and history</li>
+        <li>Any question reports you have submitted</li>
+    </ul>
+
+    <div class="warning">
+        <strong>⚠️ This action cannot be undone.</strong>
+        <p style="margin-top: 8px; margin-bottom: 0;">Once your account is deleted, your data cannot be recovered. You will need to sign in again to create a new account if you wish to use PSC Helper again.</p>
+    </div>
+
+    <h2 id="email-request">Option 3 — Request Deletion by Email</h2>
+
+    <p>If you no longer have access to the app, you can request account deletion by emailing us:</p>
+
+    <div class="step-box">
+        <p style="margin-bottom: 8px;"><strong>Email:</strong> <a href="mailto:foruniverse.dev@gmail.com" class="contact-email">foruniverse.dev@gmail.com</a></p>
+        <p style="margin-bottom: 0;"><strong>Subject:</strong> Account Deletion Request — PSC Helper</p>
+    </div>
+
+    <p>Please include the following details in your email:</p>
+    <ul>
+        <li>The email address linked to your PSC Helper account</li>
+        <li>The Google account you used to sign in</li>
+        <li>A brief reason for deletion (optional)</li>
+    </ul>
+
+    <p>We will process your request and delete your account within <strong>7 business days</strong>. You will receive a confirmation email once the deletion is complete.</p>
+
+    <h2 id="data-retained">What Data Is Retained After Deletion</h2>
+
+    <p>For legal and security reasons, we may retain certain limited information after account deletion:</p>
+    <ul>
+        <li><strong>Anonymous quiz statistics</strong> — used for improving the app, with no link to your identity</li>
+        <li><strong>Server logs</strong> — retained for up to 30 days for security and abuse prevention</li>
+    </ul>
+
+    <p>No personally identifiable information is retained beyond the deletion process.</p>
+
+    <h2 id="help">Need Help?</h2>
+
+    <div class="info">
+        <p style="margin-bottom: 0;">If you have any questions about managing your account or our data practices, please contact us at <a href="mailto:foruniverse.dev@gmail.com" class="contact-email">foruniverse.dev@gmail.com</a>. We typically respond within 48 hours.</p>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 ForUniverse. All rights reserved.</p>
+        <p style="margin-top: 4px;">Last updated: June 11, 2026</p>
+    </div>
+
+</div>
+</body>
+</html>
